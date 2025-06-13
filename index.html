@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-List</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p id="head">TO-DO-List</p>
+        <label id="label1" for="input1">Task:</label>
+        <input id="input1" type="text" placeholder="Enter the task " class="input-task" onkeydown="
+            if(event.key === 'Enter'){
+                addToList();
+            }
+            ">
+        <label id="label2" for="input2">Add Date:</label>
+        <input id="input2" type="date" class="input-date" onkeydown="
+            if(event.key === 'Enter'){
+                addToList();
+            }
+            ">
+        <button id="add-btn" class="add-btn" onclick="
+        addToList();
+        ">ADD</button>
+        <button id="reset-btn" class="reset-btn" onclick="
+        resetTask();
+        ">Reset</button>
+    </div>
+    <div class="container-task-list"></div>
+</body>
+
+</html>
